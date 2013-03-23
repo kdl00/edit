@@ -27,8 +27,9 @@
                 <div class="nav-collapse collapse">
                     <ul class="nav">
                         <li><a href="/">Home</a></li>
-                        <li><a href="NewReportForm.aspx">New Report</a></li>
-                        <li><a href="#">Show Reports NYI</a></li>
+                        <li><a href="Explore.aspx">Explore</a></li>
+                        <li><a href="#">Discover</a></li>
+                        <li><a href="#">Insights</a></li>
                     </ul>
                 </div>
                 <!--/.nav-collapse -->
