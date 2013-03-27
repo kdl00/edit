@@ -16,7 +16,7 @@
             <h3>
                 Explore your data</h3>
         </div>
-        </div>
+       
         <dx:ASPxPivotGrid ID="ASPxPivotGrid1" runat="server" ClientIDMode="AutoID" DataSourceID="SqlDataSource1"
             OptionsView-ShowFilterHeaders="False" OptionsView-ShowHorizontalScrollBar="true" Height="100px" Width="100%">
            
@@ -99,6 +99,6 @@
         <dx:ASPxPivotCustomizationControl ID="ASPxPivotCustomizationControl1" runat="server"
             Height="606px" Width="698px" ASPxPivotGridID="ASPxPivotGrid1">
         </dx:ASPxPivotCustomizationControl>
-    
+     </div>
     </form>
 </asp:Content>
