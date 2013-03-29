@@ -5,4 +5,7 @@
     <div class="page-header">
         <h3>Welcome to EDIT</h3>
     </div>
+    <div class="container">
+        Use the links above to navigate.
+    </div>
 </asp:Content>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Bootstrap.Master" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Edit.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Bootstrap.Master" AutoEventWireup="true" CodeBehind="CorrelationTest.aspx.cs" Inherits="Edit.WebForm1" %>
 <%@ Register assembly="DevExpress.XtraCharts.v12.2.Web, Version=12.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.XtraCharts.Web" tagprefix="dxchartsui" %>
 <%@ Register assembly="DevExpress.XtraCharts.v12.2, Version=12.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.XtraCharts" tagprefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeaderContent" runat="server">
@@ -22,7 +22,7 @@
                 <asp:Literal ID="Literal1" runat="server"></asp:Literal>
                 <br /><br />
           &nbsp;<asp:Button ID="Button1" runat="server"
-            Text="Submit" class="btn btn-primary" onclick="Button1_Click" />
+            Text="Submit" class="btn btn-primary btn-large" onclick="Button1_Click" />
             </div>
 
         </div>

@@ -112,9 +112,9 @@ namespace Edit
             }
 
             double correlation = Math.Round(Correlation.Pearson(col1Values, col2Values), 3, MidpointRounding.ToEven);
-            double coeffDetermination = Math.Round(Math.Pow(correlation, 2), 3, MidpointRounding.ToEven);
-            double coeffAlienation = Math.Round(1 - coeffDetermination, 3, MidpointRounding.ToEven);
-            Literal1.Text = String.Format("The correlation is: {0}<br>Coefficient of determination: {1}<br>Coefficient of alienation: {2}", correlation, coeffDetermination, coeffAlienation);
+            //double coeffDetermination = Math.Round(Math.Pow(correlation, 2), 3, MidpointRounding.ToEven);
+           //double coeffAlienation = Math.Round(1 - coeffDetermination, 3, MidpointRounding.ToEven);
+            Literal1.Text = String.Format("The correlation is: {0}<br>", correlation);
         }
     }
 }

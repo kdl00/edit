@@ -11,7 +11,7 @@ namespace Edit
     public partial class Explore : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        { 
+        {
 
         }
     }

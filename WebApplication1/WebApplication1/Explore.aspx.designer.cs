@@ -85,40 +85,31 @@ namespace Edit {
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldScoreOnWriting;
         
         /// <summary>
-        /// fieldTotalReadingLessonsonBlackBoard control.
+        /// fieldBOYBBReadingScore control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldTotalReadingLessonsonBlackBoard;
+        protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldBOYBBReadingScore;
         
         /// <summary>
-        /// fieldBBReadingScore control.
+        /// fieldEOYTotalReadingLessonsonBlackBoard control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldBBReadingScore;
+        protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldEOYTotalReadingLessonsonBlackBoard;
         
         /// <summary>
-        /// fieldTotalReadingLessonsonBlackBoard1 control.
+        /// fieldEOYBBReadingScore control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldTotalReadingLessonsonBlackBoard1;
-        
-        /// <summary>
-        /// fieldBBReadingScore1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldBBReadingScore1;
+        protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldEOYBBReadingScore;
         
         /// <summary>
         /// fieldStudyIslandWeeksUsed control.

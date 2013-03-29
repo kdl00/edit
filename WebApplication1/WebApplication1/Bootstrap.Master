@@ -26,10 +26,9 @@
                 <a class="brand" href="/">EDIT</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="Explore.aspx">Explore</a></li>
-                        <li><a href="#">Discover</a></li>
-                        <li><a href="#">Insights</a></li>
+                        <li><a href="/" id="navHome">Home</a></li>
+                        <li><a href="Explore.aspx" id="navExplore">Reports</a></li>
+                        <li><a href="CorrelationTest.aspx" id="navCorrelation">Data Correlation</a></li>
                     </ul>
                 </div>
                 <!--/.nav-collapse -->
@@ -37,7 +36,7 @@
         </div>
     </div>
     <div class="container">
-    <div class="row">
+    <div class="row" style="padding:0 19px">
         <asp:ContentPlaceHolder ID="BodyContent" runat="server">
         </asp:ContentPlaceHolder>
     </div>
