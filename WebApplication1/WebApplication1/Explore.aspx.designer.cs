@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Edit {
-    
-    
-    public partial class Explore {
-        
+namespace Edit
+{
+
+
+    public partial class Explore
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// ASPxPivotGrid1 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid ASPxPivotGrid1;
-        
+
         /// <summary>
         /// fieldTeacherID control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldTeacherID;
-        
+
         /// <summary>
         /// fieldSchoolCode control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldSchoolCode;
-        
+
         /// <summary>
         /// fieldGrade control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldGrade;
-        
+
         /// <summary>
         /// fieldScoreOnSpellingTest0to28 control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldScoreOnSpellingTest0to28;
-        
+
         /// <summary>
         /// fieldScoreOnSummary control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldScoreOnSummary;
-        
+
         /// <summary>
         /// fieldScoreOnWriting control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldScoreOnWriting;
-        
+
         /// <summary>
         /// fieldBOYBBReadingScore control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldBOYBBReadingScore;
-        
+
         /// <summary>
         /// fieldEOYTotalReadingLessonsonBlackBoard control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldEOYTotalReadingLessonsonBlackBoard;
-        
+
         /// <summary>
         /// fieldEOYBBReadingScore control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldEOYBBReadingScore;
-        
+
         /// <summary>
         /// fieldStudyIslandWeeksUsed control.
         /// </summary>
@@ -119,7 +121,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldStudyIslandWeeksUsed;
-        
+
         /// <summary>
         /// fieldStudyIslandDaysUsed control.
         /// </summary>
@@ -128,7 +130,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldStudyIslandDaysUsed;
-        
+
         /// <summary>
         /// fieldStudyIslandMinutedUsed control.
         /// </summary>
@@ -137,7 +139,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldStudyIslandMinutedUsed;
-        
+
         /// <summary>
         /// fieldStudyIslandAvgWeek control.
         /// </summary>
@@ -146,7 +148,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldStudyIslandAvgWeek;
-        
+
         /// <summary>
         /// fieldStudyIslandQuestions control.
         /// </summary>
@@ -155,7 +157,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldStudyIslandQuestions;
-        
+
         /// <summary>
         /// fieldStudyIslandReadingQuestions control.
         /// </summary>
@@ -164,7 +166,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldStudyIslandReadingQuestions;
-        
+
         /// <summary>
         /// fieldStudyIslandMathQuestions control.
         /// </summary>
@@ -173,7 +175,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldStudyIslandMathQuestions;
-        
+
         /// <summary>
         /// fieldStudyIslandAppliedQuestions control.
         /// </summary>
@@ -182,7 +184,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldStudyIslandAppliedQuestions;
-        
+
         /// <summary>
         /// fieldStudyIslandProbSolv control.
         /// </summary>
@@ -191,7 +193,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldStudyIslandProbSolv;
-        
+
         /// <summary>
         /// fieldStudyIslandAttempts control.
         /// </summary>
@@ -200,7 +202,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldStudyIslandAttempts;
-        
+
         /// <summary>
         /// fieldStudyIslandBlankAnswers control.
         /// </summary>
@@ -209,7 +211,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldStudyIslandBlankAnswers;
-        
+
         /// <summary>
         /// fieldEOYMathLevel control.
         /// </summary>
@@ -218,7 +220,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldEOYMathLevel;
-        
+
         /// <summary>
         /// fieldEOYScienceLevel control.
         /// </summary>
@@ -227,7 +229,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldEOYScienceLevel;
-        
+
         /// <summary>
         /// fieldEOYReadingScore control.
         /// </summary>
@@ -236,7 +238,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldEOYReadingScore;
-        
+
         /// <summary>
         /// fieldEOYCOmpositeScore control.
         /// </summary>
@@ -245,7 +247,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldEOYCOmpositeScore;
-        
+
         /// <summary>
         /// fieldEOYPSSAScore control.
         /// </summary>
@@ -254,7 +256,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldEOYPSSAScore;
-        
+
         /// <summary>
         /// fieldEOYProblemSolvingScore control.
         /// </summary>
@@ -263,7 +265,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPivotGrid.PivotGridField fieldEOYProblemSolvingScore;
-        
+
         /// <summary>
         /// SqlDataSource1 control.
         /// </summary>
@@ -272,7 +274,7 @@ namespace Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-        
+
         /// <summary>
         /// ASPxPivotCustomizationControl1 control.
         /// </summary>

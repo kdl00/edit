@@ -6,9 +6,6 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
-using STATCONNECTORCLNTLib; 
-using StatConnectorCommonLib; 
-using STATCONNECTORSRVLib;
 using MathNet.Numerics.Statistics;
 
 
@@ -18,8 +15,6 @@ namespace Edit
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           // HttpContext ctx = HttpContext.Current;
-           //ctx.Request.Form[
             string connStr = "Server=127.0.0.1;Database=edit;Trusted_Connection=True;";
             SqlConnection conn = new SqlConnection(connStr);
             conn.Open();
@@ -30,43 +25,13 @@ namespace Edit
 
             tableSchema.Load(r);
 
-           foreach(DataColumn dc in tableSchema.Columns)
-           {
+            foreach (DataColumn dc in tableSchema.Columns)
+            {
                 DropDownList1.Items.Add(dc.ColumnName);
                 DropDownList2.Items.Add(dc.ColumnName);
-           }
-
-          
+            }
 
             conn.Close();
-
-           // tableSchema.Columns.Contains()
-         // //  if (r.HasRows)
-        //    {
-       //         while (r.Read())
-       //         {
-
-       //         }
-       //     }
-
-           
-
-            /*
-            StatConnector conn = new STATCONNECTORSRVLib.StatConnector();
-            conn.Init("R");
-            double[] x = new double[1000];
-            double[] y = new double[1000];
-            for (int i = 0; i < 1000; i++)
-            {
-                x[i] = i;
-                y[i] = Math.Sqrt(i*2);
-            }
-            conn.EvaluateNoReturn("dx <- c(44.4, 45.9, 41.9, 53.3, 44.7, 44.1, 50.7, 45.2, 60.1)");
-            conn.EvaluateNoReturn("dy <- c( 2.6,  3.1,  2.5,  5.0,  3.6,  4.0,  5.2,  2.8,  3.8)");
-            object[] o = conn.Evaluate("cor.test(dx,dy)");
-            // for pearson correlation [3] of returned object contains the correlation coef
-           Literal1.Text = o[3].ToString();
-            conn.Close();*/
         }
 
 
@@ -111,10 +76,9 @@ namespace Edit
                 }
             }
 
-            double correlation = Math.Round(Correlation.Pearson(col1Values, col2Values), 3, MidpointRounding.ToEven);
-            //double coeffDetermination = Math.Round(Math.Pow(correlation, 2), 3, MidpointRounding.ToEven);
-           //double coeffAlienation = Math.Round(1 - coeffDetermination, 3, MidpointRounding.ToEven);
-            Literal1.Text = String.Format("The correlation is: {0}<br>", correlation);
+            double correlation = Math.Round(Correlation.Pearson(col1Values, col2Values), 5, MidpointRounding.ToEven);
+            double percentageCorrelation = Math.Round(correlation * 100, 0);
+            Literal1.Text = String.Format("The correlation is: {0}% ({1})<br/><p><strong>Please understand that high correlations do not necessarily imply causation -- only association!</strong></p><br/>", percentageCorrelation, correlation);
         }
     }
 }
