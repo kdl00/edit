@@ -6,6 +6,7 @@
 <%@ Register Assembly="DevExpress.XtraCharts.v12.2, Version=12.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.XtraCharts" TagPrefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeaderContent" runat="server">
+    <title>Correlation Test</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyContent" runat="server">
     <form id="form2" runat="server" method="post">

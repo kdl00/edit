@@ -4,7 +4,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
     <link href="css/bootstrap.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="HeaderContent" runat="server">
     </asp:ContentPlaceHolder>
@@ -21,7 +20,7 @@
                 <div class="nav-collapse collapse">
                     <ul class="nav">
                         <li><a href="/" id="navHome">Home</a></li>
-                        <li><a href="Explore.aspx" id="navExplore">Reports</a></li>
+                        <li><a href="Explore.aspx" id="navExplore">Explore Data</a></li>
                         <li><a href="CorrelationTest.aspx" id="navCorrelation">Data Correlation</a></li>
                         <li><a href="Help.aspx" id="navHelp">Help</a></li>
                     </ul>

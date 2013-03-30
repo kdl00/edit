@@ -2,6 +2,7 @@
     CodeBehind="Help.aspx.cs" Inherits="Edit.Help" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeaderContent" runat="server">
+    <title>Help</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyContent" runat="server">
     <div class="span10">
@@ -17,7 +18,8 @@
                 <li><a href="#Correlation Test">Correlation Test</a></li>
             </ul>
             <br />
-            <br />d
+            <br />
+            d
             <br />
             <h4 id="Explore Your Data">
                 Explore Your Data</h4>
