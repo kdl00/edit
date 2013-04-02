@@ -19,7 +19,6 @@
             </ul>
             <br />
             <br />
-            d
             <br />
             <h4 id="Explore Your Data">
                 Explore Your Data</h4>

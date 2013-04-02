@@ -30,6 +30,47 @@
             <asp:DropDownList ID="DropDownList2" runat="server">
             </asp:DropDownList>
             <br />
+            <dxchartsui:WebChartControl ID="WebChartControl1" runat="server" Height="282px" 
+                Width="776px">
+<FillStyle><OptionsSerializable>
+<cc1:SolidFillOptions></cc1:SolidFillOptions>
+</OptionsSerializable>
+</FillStyle>
+
+                <seriestemplate>
+                    <viewserializable>
+                        <cc1:PointSeriesView>
+                        </cc1:PointSeriesView>
+                    </viewserializable>
+                    <labelserializable>
+                        <cc1:PointSeriesLabel LineVisible="True">
+                            <fillstyle>
+                                <optionsserializable>
+                                    <cc1:SolidFillOptions />
+                                </optionsserializable>
+                            </fillstyle>
+                            <pointoptionsserializable>
+                                <cc1:PointOptions>
+                                </cc1:PointOptions>
+                            </pointoptionsserializable>
+                        </cc1:PointSeriesLabel>
+                    </labelserializable>
+                    <legendpointoptionsserializable>
+                        <cc1:PointOptions>
+                        </cc1:PointOptions>
+                    </legendpointoptionsserializable>
+                </seriestemplate>
+
+<CrosshairOptions><CommonLabelPositionSerializable>
+<cc1:CrosshairMousePosition></cc1:CrosshairMousePosition>
+</CommonLabelPositionSerializable>
+</CrosshairOptions>
+
+<ToolTipOptions><ToolTipPositionSerializable>
+<cc1:ToolTipMousePosition></cc1:ToolTipMousePosition>
+</ToolTipPositionSerializable>
+</ToolTipOptions>
+            </dxchartsui:WebChartControl>
             <br />
             <asp:Literal ID="Literal1" runat="server"></asp:Literal>
             <br />
