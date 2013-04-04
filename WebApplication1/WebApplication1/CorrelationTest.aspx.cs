@@ -18,41 +18,76 @@ namespace Edit
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string connStr = "Server=127.0.0.1;Database=edit;Trusted_Connection=True;";
-            SqlConnection conn = new SqlConnection(connStr);
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM [edit].[dbo].[datawarehouse]", conn);
-            SqlDataReader r = cmd.ExecuteReader();
-
-            DataTable tableSchema = new DataTable();
-
-            tableSchema.Load(r);
-
-            foreach (DataColumn dc in tableSchema.Columns)
+            // when the user presses a button ignore it
+            if (!IsPostBack)
             {
-                DropDownList1.Items.Add(dc.ColumnName);
-                DropDownList2.Items.Add(dc.ColumnName);
+                string connStr = "Server=127.0.0.1;Database=edit;Trusted_Connection=True;";
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand("SELECT [FriendlyText] FROM [edit].[dbo].[datawarehouseColumnMapping]", conn))
+                    {
+                        using (SqlDataReader r = cmd.ExecuteReader())
+                        {
+
+                            DataTable tableSchema = new DataTable();
+
+                            tableSchema.Load(r);
+
+                            foreach (DataRow dc in tableSchema.Rows)
+                            {
+                                DropDownList1.Items.Add((string)dc.ItemArray.GetValue(0));
+                                DropDownList2.Items.Add((string)dc.ItemArray.GetValue(0));
+                            }
+                        }
+                    }
+                }
             }
-
-            conn.Close();
-
-
-
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string c1 = DropDownList1.SelectedValue;
-            string c2 = DropDownList2.SelectedValue;
             string connStr = "Server=127.0.0.1;Database=edit;Trusted_Connection=True;";
+
+            string col1 = "";
+            string col2 = "";
 
             List<double> col1Values = new List<double>();
             List<double> col2Values = new List<double>();
+            WebChartControl1.Titles.Clear();
+            WebChartControl1.Series.Clear();
+
+            if (DropDownList1.SelectedValue.Equals(DropDownList2.SelectedValue))
+            {
+                Literal1.Text = "The same columns cannot be compared because the correlation is always 100%";
+                return;
+            }
 
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
-                using (SqlCommand cmd = new SqlCommand(String.Format("SELECT [{0}],[{1}] FROM [edit].[dbo].[datawarehouse]", c1, c2), conn))
+
+                // lookup friendlytext, get the real DB column name...
+                using (SqlCommand cmd = new SqlCommand(String.Format("SELECT [DBColumn] FROM [edit].[dbo].[datawarehouseColumnMapping] WHERE FriendlyText = '{0}' OR FriendlyText = '{1}'",DropDownList1.SelectedValue, DropDownList2.SelectedValue),conn))
+                {
+                    using (SqlDataReader r = cmd.ExecuteReader())
+                    {
+                        try
+                        {
+                            r.Read(); // move to first row
+                            col1 = r.GetString(0);
+                            r.Read();
+                            col2 = r.GetString(0);
+
+                        }
+                        catch (Exception ex)
+                        {
+
+                        }
+                    }
+                }
+
+                using (SqlCommand cmd = new SqlCommand(String.Format("SELECT [{0}],[{1}] FROM [edit].[dbo].[datawarehouse]", col1, col2), conn))
                 {
                     using (SqlDataReader r = cmd.ExecuteReader())
                     {
@@ -104,9 +139,9 @@ namespace Edit
             s.ValueScaleType = ScaleType.Numerical;
             ChartTitle ct = new ChartTitle();
             ct.Text = DropDownList1.SelectedValue + " compared to " + DropDownList2.SelectedValue;
-            WebChartControl1.Titles.Clear();
+            
             WebChartControl1.Titles.Add(ct);
-            WebChartControl1.Series.Clear();
+           
             WebChartControl1.Series.Add(s);
             ((PointSeriesView)WebChartControl1.Series[0].View).Indicators.Clear();
             ((PointSeriesView)WebChartControl1.Series[0].View).Indicators.Add(rl);
