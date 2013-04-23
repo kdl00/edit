@@ -12,7 +12,7 @@
         </div>
         <div class="container">
             <h4>
-                What would you like with?</h4>
+                What would you like help with?</h4>
             <ul class="helplst">
                 <li><a href="#Explore Your Data">Explore Your Data</a></li>
                 <li><a href="#Correlation Test">Correlation Test</a></li>

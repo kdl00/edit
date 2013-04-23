@@ -11,6 +11,47 @@
 <%@ Register assembly="DevExpress.Web.v12.2, Version=12.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxPanel" tagprefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeaderContent" runat="server">
     <title>Explore Your Data</title>
+    
+
+   
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+            $("div").each(function () {
+                if ($(this).attr('class') == 'dxpgFLTextDiv') {
+                    // strip whitespace
+                    switch ($(this).text().replace(/\s/g, '')) {
+                        case 'FilterArea':
+                            // id = f
+                            ($(this).children('div:not([class])')).html('<div rel="tooltip" title="These information elements represent data. You can drag these on to the Column Fields, Row Fields or Data Fields."><br>Information Fields [?]</div>');
+                            break;
+                        case 'RowArea':
+                            // id = r
+                            ($(this).children('div:not([class])')).html('<div rel="tooltip" title="These information elements will be presented in rows in the student information grid view above."><br>Row Fields [?]</div>');
+                            break;
+                        case 'ColumnArea':
+                            // id = c
+                            ($(this).children('div:not([class])')).html('<div rel="tooltip" title="These information elements will be presented in columns in the student information grid view above."><br>Column Fields [?]</div>');
+                            break;
+                        case 'DataArea':
+                            // id = d
+                            ($(this).children('div:not([class])')).html('<div rel="tooltip" title="These information elements will be presented as data in the student information grid view above."><br>Data Fields [?]</div>');
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            });
+        });
+        $(document).ready(function () {
+            if ($('[rel="tooltip"]').length) {
+                $('[rel="tooltip"]').popover({ 
+                trigger: 'hover', 
+                container: 'body' });
+            }
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyContent" runat="server">
     <form id="form1" runat="server">
@@ -20,16 +61,19 @@
                 Explore Your Data</h3>
         </div>
         <p>
-            The table below allows you to manipulate data. You can dissect a large amount of
+            The Student Information Table below allows you to manipulate data. You can dissect a large amount of
             student information and place only the data you need into a compact and summarized
             visual report.</p>
         <p>
-            You can begin by browsing through the student information elements in the <strong>Filter
-                Area</strong> below. When you find the student information element you wish
+            You can begin by browsing through the student information elements in the <strong>Information Fields area</strong> below. When you find the student information element you wish
             to include in your report <strong>click and drag the student information element</strong>
-            into <strong>Column Area</strong>, <strong>Row Area</strong> or <strong>Data Area</strong>.<br /><br />
+            into <strong>Column Fields</strong>, <strong>Row Fields</strong> or <strong>Data Fields</strong>.<br /><br />
         </p>
             <br />
+            <div class="page-header">
+            <h4>
+                Student Information Grid View</h4>
+        </div>
         <div style="overflow: auto;">
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:editConnectionString %>"
             SelectCommand="SELECT * FROM [datawarehouse]"></asp:SqlDataSource>
@@ -80,10 +124,15 @@
                 <OptionsView ShowFilterHeaders="False"></OptionsView>
             </dx:ASPxPivotGrid>
         </div>
-        
+        <div class="page-header">
+            <h4>
+                Student Information Table</h4>
+        </div>
         <dx:ASPxPivotCustomizationControl ID="ASPxPivotCustomizationControl1" runat="server"
-            Height="606px" Width="698px" ASPxPivotGridID="ASPxPivotGrid1" Layout="BottomPanelOnly2by2">
+            Height="606px" Width="698px" ASPxPivotGridID="ASPxPivotGrid1" 
+            Layout="BottomPanelOnly2by2" DeferredUpdates="True">
         </dx:ASPxPivotCustomizationControl>
     </div>
     </form>
+ 
 </asp:Content>

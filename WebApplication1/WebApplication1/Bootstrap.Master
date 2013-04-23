@@ -4,6 +4,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    
+    <script type="text/javascript" src="js/jquery-ui-1.10.2/jquery-1.9.1.js"></script>
+     <script type="text/javascript" src="js/bootstrap.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="HeaderContent" runat="server">
     </asp:ContentPlaceHolder>
@@ -34,6 +37,5 @@
             </asp:ContentPlaceHolder>
         </div>
     </div>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 </html>

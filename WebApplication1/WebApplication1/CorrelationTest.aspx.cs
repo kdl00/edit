@@ -21,7 +21,7 @@ namespace Edit
             // when the user presses a button ignore it
             if (!IsPostBack)
             {
-                string connStr = "Server=127.0.0.1;Database=edit;Trusted_Connection=True;";
+                string connStr = "Server=127.0.0.1;Database=edit;user=sa;password=1234;";
                 using (SqlConnection conn = new SqlConnection(connStr))
                 {
                     conn.Open();
